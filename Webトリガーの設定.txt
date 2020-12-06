@@ -1,0 +1,169 @@
+Webトリガーの設定ファイルについて
+JSONフォーマットです。
+
+各要素の説明
+field
+
+type
+
+必須
+
+概要
+
+triggers
+
+Array
+
+true
+
+トリガーの配列です。トリガーボタンと対応します。
+
+triggers/category
+
+string
+
+false
+
+実行後のチェックマークがカテゴリー毎に付くようになります。
+
+省略した場合は""_" が入ります。
+
+triggers/showConfirmDialog
+
+boolean
+
+true
+
+トリガーボタンを押した際に確認ダイアログを表示するかどうかの設定です。 falseの場合は確認なくトリガーが実行されます。
+
+triggers/displayName
+
+string
+
+true
+
+トリガーボタンに表示する名前を指定します。
+
+triggers/color
+
+[number, number, number]
+
+false
+
+トリガーボタンの色を0~1の範囲でRGB指定します。
+
+省略した場合は[1, 1, 1]が入ります。
+
+triggers/state
+
+Array
+
+true
+
+会場に送られるメッセージの設定の配列です。
+
+triggers/state/key
+
+string
+
+true
+
+メッセージの識別名を指定します。
+
+Webトリガーから通知する対象はGlobalのみとなります。
+
+triggers/state/type
+
+string ("signal", "bool", "integer", "float" のいずれか)
+
+true
+
+メッセージの型(値の種類)を指定します。
+
+triggers/state/value
+
+any (typeに依存)
+
+typeが"bool"か"integer"か"float"
+
+メッセージの値を指定します。
+
+typeが"bool"の場合、trueまたはfalseを指定します。
+
+typeが"integer"の場合、整数値を指定します。
+
+typeが"float"の場合、数値を指定します。
+
+typeが"signal"の場合、この項目は設定しません。
+
+sample.json
+
+{
+    "triggers": [
+        {
+            "category": "SetGameObjectActive",
+            "showConfirmDialog": false,
+            "displayName" : "SetGameObjectActiveGimmick: true",
+            "state": [
+                {
+                    "key": "gameobject.active",
+                    "type": "bool",
+                    "value": true
+                }
+            ],
+            "color": [0.0, 1.0, 0.0]
+        },
+        {
+            "category": "SetGameObjectActive",
+            "showConfirmDialog": false,
+            "displayName" : "SetGameObjectActiveGimmick: false",
+            "state": [
+                {
+                    "key": "gameobject.active",
+                    "type": "bool",
+                    "value": false
+                }
+            ],
+            "color": [0.0, 1.0, 0.5]
+        },
+        {
+            "showConfirmDialog": true,
+            "displayName" : "SetActive: true & Animator: 1 & PlayAudio",
+            "state": [
+                {
+                    "key": "gameobject.active",
+                    "type": "bool",
+                    "value": true
+                },
+                {
+                    "key": "animator.int",
+                    "type": "integer",
+                    "value": 1
+                },
+                {
+                    "key": "audiosource.play",
+                    "type": "signal"
+                }
+            ],
+            "color": [0.0, 1.0, 1.0]
+        }
+    ]
+}
+​
+プレビューでもWebTriggerを使うことができます
+
+ワールドのプレビュー
+/world/preview-world
+​
+
+🏟イベント - 前
+ワールドでイベントを開催する
+次
+Spawn Point
+
+最終更新 5 か月前
+このページは役に立ちましたか？
+目次
+Webからトリガーを実行する
+使い方
+Webトリガーの設定ファイルについて

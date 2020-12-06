@@ -1,0 +1,26 @@
+ワールドに入った際とリスポーンした際の位置と回転を決めるコンポーネントです。
+プロパティ
+プロパティ
+
+機能
+Spawn Type
+ワールドをイベントに使用した際にユーザーの役割によって使用するSpawn Pointを変更する際に設定します。（参照: ワールドでイベントを開催する）
+
+-Entrance
+これを選択すると、一般参加者の初期位置になります。ワールドにはSpawn Typeが「Entrance」のSpawn Pointが1つ以上配置されている必要があります。Spawn Typeが「Entrance」であるSpawn Pointが2つ以上ある場合は、位置は毎回ランダムに決定されます。
+
+-On Stage 1
+これを選択すると、スタッフの初期位置になります。これを選択したSpawn Pointが1つもない場合はスタッフもEntranceが初期位置になります。ワールドではこれを選択したSpawn Pointは使用されません。
+
+-World Gate Destination
+WorldGateを使用して入室した際の初期位置として使います。それ以外の入室方法では使用されません。
+
+World Gate Key
+
+Spawn TypeとしてWorld Gate Destinationを指定した場合のみ設定できます。ここに設定した値と同じ値がKeyに設定されているWorldGateを使用して入場した場合にこのSpawn Pointが初期位置になります。
+
+※スタッフ… cluster の「イベント機能」における権限です。詳しくは：スタッフと管理者権限 - ヘルプセンター | cluster（クラスター） 
+
+詳細
+コンポーネントをアタッチしたGameObjectのTransformのPositionとRotationが、プレイヤーの出現する位置と回転になります。
+ワールドにはSpawnTypeが「Entrance」のSpawnPointが1つ以上配置されている必要があります。

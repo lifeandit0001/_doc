@@ -1,0 +1,8 @@
+GameObject
+ Plane プレーン
+ Assete Create　Material 色
+　
+　Object Physics 物理 Rigid (硬直)　body　
+
+ 
+ 

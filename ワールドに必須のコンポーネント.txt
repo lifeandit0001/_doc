@@ -1,0 +1,23 @@
+ワールドに必須のコンポーネント
+
+ワールドに必ず配置する必要があるコンポーネントの説明です
+SpawnPoint
+ワールドに入った際とリスポーンした際の位置を決めるコンポーネントです
+
+ワールドにはSpawnTypeが「Entrance」のSpawnPointが1つ以上配置されている必要があります
+
+Spawn Point
+/spawnpoint
+https://clustervr.gitbook.io/creatorkit/spawnpoint
+
+DespawnHeight
+プレイヤーやアイテムをリスポーンする高さを決めるコンポーネントです
+
+ワールドに1つ配置されている必要があります
+
+Despawn Height
+プレイヤーやアイテムをリスポーンする高さを決めるコンポーネントです
+
+ワールドに1つ配置されている必要があります
+
+https://clustervr.gitbook.io/creatorkit/despawnheight

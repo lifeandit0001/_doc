@@ -1,0 +1,22 @@
+WorldGate
+
+WorldGateを使うと、任意のワールドにプレイヤーを移動させることが出来ます。
+
+
+プロパティ
+プロパティ
+
+機能
+
+World Or Event Id
+
+移動先のワールドまたはイベントのIdを指定します。(Idはワールド詳細のURLの https://cluster.mu/w/ 以降、またはイベント詳細のURLの https://cluster.mu/e/ 以降の文字列になります)
+
+Key
+
+移動先のワールドまたはイベントで初期位置となるSpawnPointを指定するために使います。移動先のSpawnPointに、SpawnTypeがWorldGateDestinationでWorldGateKeyの値がここに設定した値と一致するものがあれば、そこに出現するようになります。(なければ通常の入室と同じSpawnPointが使われます)
+
+詳細
+プレイヤーとの衝突判定を取るために、World Gateコンポーネントと同じ階層にColliderコンポーネントが1つ以上必要です。
+
+また、子のコライダーにも衝突判定を与える場合はWorld Gateコンポーネントと同じ階層にRigidbodyがアタッチされている必要があります。
